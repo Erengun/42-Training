@@ -10,7 +10,16 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-int   ft_isalpha(int a)
+int   ft_isalpha(char *str)
 {
-      
+      int i;
+
+      i = 0;
+      while(str[i])
+      {
+            if(!((str[i] > 64 && str[i] < 91) || (str[i] >= 97 && str[i] <= 122)))
+                  return (0);
+            i++;
+      }
+      return (1);
 }

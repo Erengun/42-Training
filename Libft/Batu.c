@@ -5,6 +5,13 @@ int   isBothOddOrEven(int a, int b)
 	return (0);
 }
 
+void	ft_swap(num[i], int x)
+{
+	int temp;
+	temp = num[i];
+	num[i] = x;
+	x = temp;
+}
 
 char* getLargestNumber (char *num) 
 {
@@ -21,14 +28,28 @@ char* getLargestNumber (char *num)
 	0              0  */
 	int Oddmax;
 	int Evenmax = 0;
+	int OddTemp;
+	int Eventemp;
 	int i = 0;
 
 	while(num[i])
 	{
 		if(Oddmax < num[i] && num[i] % 2 != 0)
+		{
 			Oddmax = num[i];
+			OddTemp = num[i];
+		}
+
 		if(Oddmax < num[i] && num[i] % 2 == 0)
+		{
 			Evenmax = num[i];
+			Eventemp = num[i]
+		}
 		i++;
 	}
+		if(num[i] < Oddmax &&  isBothOddOrEven(num[i], Oddmax))
+			ft_swap(num[i], num[OddTemp]);
+		if(num[i] < Evenmax &&  isBothOddOrEven(num[i], Evenmax))
+			ft_swap(num[i], num[EvenTemp]);
+
 }

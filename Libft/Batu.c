@@ -53,6 +53,10 @@ char* getLargestNumber (char *num)
 			i++;
 			
 		}
+		/* 
+		Bu kısım sonda da çalıştığı için tekrar eski haline döndürüyor string kopyalamaya ihtiyacım var sanırım
+		1289 - 9821 - 1289 gibi
+		*/
 		if(num[x] < Oddmax &&  isBothOddOrEven(num[x], Oddmax))
 			ft_swap(num[x], num[OddTemp]);
 		if(num[x] < Evenmax &&  isBothOddOrEven(num[x], Evenmax))
@@ -67,6 +71,6 @@ char* getLargestNumber (char *num)
 
 int main(void)
 {
-	getLargestNumber("5324798520");
+	getLargestNumber("1289");
 	return(1);
 }

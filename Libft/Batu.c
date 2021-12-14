@@ -1,4 +1,4 @@
-#include #stdio.h
+#include <stdio.h>
 
 int   isBothOddOrEven(int a, int b)
 {
@@ -7,11 +7,11 @@ int   isBothOddOrEven(int a, int b)
 	return (0);
 }
 
-void	ft_swap(num[i], int x)
+void	ft_swap(int y, int x)
 {
 	int temp;
-	temp = num[i];
-	num[i] = x;
+	temp = y;
+	y = x;
 	x = temp;
 }
 
@@ -48,7 +48,7 @@ char* getLargestNumber (char *num)
 			if(Oddmax < num[i] && num[i] % 2 == 0)
 			{
 				Evenmax = num[i];
-				Eventemp = num[i]
+				Eventemp = num[i];
 			}
 			i++;
 			
@@ -56,13 +56,13 @@ char* getLargestNumber (char *num)
 		if(num[x] < Oddmax &&  isBothOddOrEven(num[x], Oddmax))
 			ft_swap(num[x], num[OddTemp]);
 		if(num[x] < Evenmax &&  isBothOddOrEven(num[x], Evenmax))
-			ft_swap(num[x], num[EvenTemp]);
+			ft_swap(num[x], num[Eventemp]);
 		x++;
 	}
 	i = -1;
 	while(num[++i])
 		printf("%d", num[i]);
-	return (*num);
+	return (num);
 }
 
 int main(void)

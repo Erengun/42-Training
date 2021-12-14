@@ -50,8 +50,7 @@ char* getLargestNumber (char *num)
 				Evenmax = num[i];
 				Eventemp = num[i];
 			}
-			i++;
-			
+			i++;	
 		}
 		/* 
 		Bu kısım sonda da çalıştığı için tekrar eski haline döndürüyor string kopyalamaya ihtiyacım var sanırım

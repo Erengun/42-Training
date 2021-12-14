@@ -1,3 +1,5 @@
+#include #stdio.h
+
 int   isBothOddOrEven(int a, int b)
 {
 	if((a % 2 == 0 && b % 2 == 0) || (a % 2 != 0 && a % 2 != 0))
@@ -31,25 +33,40 @@ char* getLargestNumber (char *num)
 	int OddTemp;
 	int Eventemp;
 	int i = 0;
+	int x = 0;
 
-	while(num[i])
+	while(num[x])
 	{
-		if(Oddmax < num[i] && num[i] % 2 != 0)
+		while(num[i])
 		{
-			Oddmax = num[i];
-			OddTemp = num[i];
-		}
+			if(Oddmax < num[i] && num[i] % 2 != 0)
+			{
+				Oddmax = num[i];
+				OddTemp = num[i];
+			}
 
-		if(Oddmax < num[i] && num[i] % 2 == 0)
-		{
-			Evenmax = num[i];
-			Eventemp = num[i]
+			if(Oddmax < num[i] && num[i] % 2 == 0)
+			{
+				Evenmax = num[i];
+				Eventemp = num[i]
+			}
+			i++;
+			
 		}
-		i++;
+		if(num[x] < Oddmax &&  isBothOddOrEven(num[x], Oddmax))
+			ft_swap(num[x], num[OddTemp]);
+		if(num[x] < Evenmax &&  isBothOddOrEven(num[x], Evenmax))
+			ft_swap(num[x], num[EvenTemp]);
+		x++;
 	}
-		if(num[i] < Oddmax &&  isBothOddOrEven(num[i], Oddmax))
-			ft_swap(num[i], num[OddTemp]);
-		if(num[i] < Evenmax &&  isBothOddOrEven(num[i], Evenmax))
-			ft_swap(num[i], num[EvenTemp]);
+	i = -1;
+	while(num[++i])
+		printf("%d", num[i]);
+	return (*num);
+}
 
+int main(void)
+{
+	getLargestNumber("5324798520");
+	return(1);
 }

@@ -13,6 +13,7 @@ int   ft_isascii(int x);
 int   ft_isdigit(int x);
 int   ft_isprint(int x);
 
+void  *ft_memchr(const void *s, int c, size_t n);
 void  *ft_memmove(void *src,const void *dest, size_t len);
 void  ft_memset(void *str,int x,size_t len);
 void  ft_bzero(void *str,size_t len);

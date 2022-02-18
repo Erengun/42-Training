@@ -50,7 +50,7 @@ int	main(int argc, char **argv)
 		i = 0;
 		while (s1[i])
 		{
-			if (is_in(s1[i], s1, i + 1) && is_in(s1[i], s2, strl(s2)))
+			if (!is_in(s1[i], s1, i) && is_in(s1[i], s2, strl(s2)))
 				write(1, &s1[i], 1);
 			i++;
 		}
